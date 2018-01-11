@@ -2,7 +2,7 @@ $(function(){
     let newTodoBox = $('#newtodo')
     let addtodoBtn = $('#addtodo')
     let todoList = $('#todolist')
-
+    newTodoBox.val("");
     addtodoBtn.click(function () {
      
         let newTodo = newTodoBox.val()
@@ -46,7 +46,8 @@ $(function(){
       });
 
       $('#todolist').on('click', '.strike', function(){
-        $(this).closest('li').css("background-color","rgb(109, 211, 109)")
-      });
+        $(this).closest('li').toggleClass("highlight")
+        });
+     
      
 })
